@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Other Tailwind CSS styles... */
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif; /* Use Nunito for the entire application */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Nunito', sans-serif; /* Use Nunito for code as well */
+}

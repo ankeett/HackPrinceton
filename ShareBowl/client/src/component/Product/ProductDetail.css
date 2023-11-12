@@ -1,0 +1,12 @@
+.Carousel {
+    width: 25vmax;
+    height: 15vmax;
+    text-align: center;
+    float: right;
+    margin-top: 10px;
+}
+
+.CarouselImage{
+    width:15vmax;
+    height: 15vmax;
+}
