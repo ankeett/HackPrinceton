@@ -5,7 +5,6 @@ import {fetchProducts} from '../../actions/productAction'
 import Post from './Post'
 import { TextField, Paper,Button,InputAdornment,IconButton, FormControlLabel, Switch} from '@mui/material'
 import CancelIcon from '@mui/icons-material/Cancel';
-import Review from '../Review/Review'
 import Divider from '@mui/material/Divider';
 import SearchIcon from '@mui/icons-material/Search';
 import GoogleMapReact from 'google-map-react';
@@ -236,40 +235,6 @@ const Browse = () => {
           </nav>
 
           <div className='m-auto'>
-          {/* <div className='flex flex-col mt-[10px]'>
-            Price Range
-
-            <Slider className ='w-80'
-              getAriaLabel={() => 'Price range'}
-              value={price}
-              onChange={priceHandler}
-              valueLabelDisplay="auto"
-              max={5000}
-            />
-
-            <div className='flex flex-row gap-[30px]'>
-              <TextField label='min' value={price[0]}
-                InputProps={{
-                  startAdornment:(
-                      <InputAdornment position="start">  
-                        $
-                      </InputAdornment>
-                  )
-                }}
-              />
-        
-              {/* <TextField label='max' value={price[1]}
-                InputProps={{
-                  startAdornment:(
-                      <InputAdornment position="start">  
-                        $
-                      </InputAdornment>
-                  )
-                }}
-              /> *
-            </div> */}
-          {/* /</div> */}
-          
           <div className='mt-[20px] flex flex-col gap-2'>
             <p className='-mb-1'>Item type:</p>
           <div>
@@ -412,8 +377,6 @@ const Browse = () => {
             })
             }} InputProps={{inputProps:{min:0}}}/>
           <Divider className='m-2'/>
-          <p className='-mb-1'>Ratings:</p>
-          <Review rating={rating}  setRating = {setRating} />
           <div className=' flex flex-row gap-5 float-right'>
           <Button className=' text-white bg-[#658864] rounded-lg normal-case' onClick={handleReset}>Reset</Button>
           <Button className=' text-white bg-[#658864] rounded-lg normal-case' onClick={handleAdvanced}>Show results</Button>

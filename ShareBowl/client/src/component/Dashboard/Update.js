@@ -2,7 +2,6 @@ import { Container,Paper, Typography,TextField,InputAdornment,Grid,Button,MenuIt
 import React,{useState,useEffect,useRef} from 'react'
 import { useDispatch,useSelector } from 'react-redux';
 import { createProduct,clearErrors, updateProduct } from '../../actions/productAction';
-import Review from '../Review/Review'
 import InstantMessage from '../Error/InstantError';
 import { useNavigate, useParams } from 'react-router-dom';
 import { fetchAProduct } from '../../actions/productAction';
@@ -21,13 +20,9 @@ const Update = () => {
   const formRef = React.useRef();
   const [name,setName] = useState();
   const [description, setDescription] = useState();
-  const [price, setPrice] = useState(0);
   const [category, setCategory] = useState();
   const [subcategory, setSubCategory] = useState();
   const [stock, setStock] = useState(0);
-  const [height, setHeight]= useState(0);
-  const [width,setWidth] = useState(0);
-  const [length, setLength] = useState(0);
   const [image,setImage] = useState([]);
   const [newImages, setNewImages] = useState([]);
   const [hasErrors, setHasErrors]= useState("");

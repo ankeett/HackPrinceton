@@ -16,21 +16,16 @@ import OrganizerSignUp from './component/Authentication/OrganizerSignUp';
 import NotFound from './component/Error/NotFound';
 import CheckForget from './component/Authentication/CheckForget';
 import OrganizeHome from './component/Organize/OrganizeHome';
-import Footer from './component/Footer/Footer';
 import ActivateCompany from './component/Authentication/ActivateCompany';
 import ChangeCompanyPassword from './component/Authentication/ChangeCompanyPassword';
 import Product from './component/Product/Product';
 import SuccessfulLogout from './component/Authentication/SuccessfulLogout';
-import Cart from './component/Cart/Cart';
 import Settings from './component/Dashboard/Settings';
 import Inventory from './component/Dashboard/Inventory';
 import Orders from './component/Dashboard/Orders';
-import SquarePayment from './component/Checkout/SquarePayment';
-import Shipping from './component/Checkout/Shipping';
 import Update from './component/Dashboard/Update';
 import Browse from './component/Browse/Browse';
 import React, {useEffect, useState} from 'react';  
-import Confirmation from './component/Checkout/Confirmation';
 import ConfirmRegistration from './component/Cart/ConfirmRegistration';
 
 import { ThemeProvider } from '@mui/material/styles';
@@ -62,8 +57,6 @@ function App() {
 
         }
         <Route exact path = '/organizer/register' element={<OrganizerSignUp/>}/>
-        <Route exact path = '/confirmation' element={<Confirmation/>}/>
-
         <Route exact path = '/checkForget' element = {<CheckForget/>}/>
         <Route exact path = '/signin' element = {<SignUpIn/>}/>
         <Route exact path = '/logout' element = {<Logout/>}/>
@@ -76,10 +69,7 @@ function App() {
         {user?.role =="company" && <Route exact path = '/changeCompanyPassword' element={<ChangeCompanyPassword/>}/>}
 
         <Route exact path ="/product/:id" element={<Product/>}/>
-        {user?.role ==="user" && <Route exact path='/cart' element={<Cart/>}/>}
         {user?.role ==="user" && <Route exact path='/confirm' element={<ConfirmRegistration/>}/>}
-        {user?.role =="user" && <Route exact path ='/payment' element={<SquarePayment/>}/>}
-        {user?.role =="user" && <Route exact path ='/shipping' element={<Shipping/>}/>}
         {user?.role =="company" &&<Route exact path='/update/:id' element={<Update/>}/>}
         
 

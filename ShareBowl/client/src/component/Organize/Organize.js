@@ -2,7 +2,6 @@ import { Container,Paper, Typography,TextField,InputAdornment,Grid,Button,MenuIt
 import React,{useState,useEffect,useRef} from 'react'
 import { useDispatch,useSelector } from 'react-redux';
 import { createProduct,clearErrors } from '../../actions/productAction';
-import Review from '../Review/Review'
 import InstantMessage from '../Error/InstantError';
 import { useNavigate } from 'react-router-dom';
 import MetaData from '../../MetaData';

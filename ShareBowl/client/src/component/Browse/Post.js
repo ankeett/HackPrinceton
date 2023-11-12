@@ -1,6 +1,5 @@
 import React from 'react'
 import {Card, CardActionArea, CardMedia, Typography,CardContent} from '@mui/material'
-import Rating from '@mui/material/Rating';
 import { Link } from 'react-router-dom'
 
 const Post = ({user, p}) => {
@@ -21,15 +20,6 @@ const Post = ({user, p}) => {
         <Typography variant="body2" color="text.secondary">
           {p.description}
         </Typography>
-        {user!==''
-      && user?.role === "user"
-      &&
-      <Rating
-        name="simple-controlled"
-        value={p.ratings}
-        precision={0.5}
-        disabled = {true}
-      />}
       </CardContent>
       </CardActionArea>
       
